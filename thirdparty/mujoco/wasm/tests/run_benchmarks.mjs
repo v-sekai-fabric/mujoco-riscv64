@@ -44,4 +44,3 @@ try {
   console.error('Test runner script failed:', error);
   process.exit(1);
 }
-

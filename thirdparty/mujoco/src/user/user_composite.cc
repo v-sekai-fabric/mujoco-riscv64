@@ -1100,4 +1100,3 @@ void mjCComposite::MakeSkin2Subgrid(mjCModel* model, mjtNum inflate) {
   mju_free(Weight);
   mju_free(D);
 }
-

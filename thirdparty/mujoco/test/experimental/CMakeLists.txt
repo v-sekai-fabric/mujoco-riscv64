@@ -28,5 +28,3 @@ if(MUJOCO_WITH_USD)
 
   add_subdirectory(usd/plugins/mjcf)
 endif()
-
-

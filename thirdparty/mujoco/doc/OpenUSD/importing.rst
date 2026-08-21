@@ -26,4 +26,3 @@ type ``text/usd``.
     </mujoco>
 
 In this example the ``<model file="chair.usdz"/>`` line in ``<asset>`` tells MuJoCo to load and process the USD file.
-
