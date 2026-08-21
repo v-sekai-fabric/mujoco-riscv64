@@ -1,7 +1,7 @@
 #usda 1.0
 (
     defaultPrim = "World"
-    doc = """Generated from Composed Stage of root layer 
+    doc = """Generated from Composed Stage of root layer
 """
     endTimeCode = 1
     startTimeCode = 0
@@ -86,4 +86,3 @@ def Xform "World"
         }
     }
 }
-

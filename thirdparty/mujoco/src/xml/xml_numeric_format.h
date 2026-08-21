@@ -34,4 +34,3 @@ class FullFloatPrecision {
 }  // namespace mujoco
 
 #endif  // MUJOCO_SRC_XML_NUMERIC_FORMAT_H_
-

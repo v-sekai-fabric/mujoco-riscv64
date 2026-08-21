@@ -1,0 +1,24 @@
+name: Checks
+
+on:
+  pull_request:
+  merge_group:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  prek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install prek
+      # Pinned to the root config. This repository vendors MuJoCo, which ships
+      # its own .pre-commit-config.yaml, and prek treats that as a second
+      # project and runs it too - failing on upstream's files, which we do not
+      # own and must not reformat.
+      - run: prek run --all-files --config .pre-commit-config.yaml --show-diff-on-failure --color always

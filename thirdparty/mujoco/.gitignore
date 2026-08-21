@@ -41,4 +41,3 @@ MUJOCO_LOG.TXT
 # JavaScript bindings build
 wasm/**/dist/
 **/node_modules/
-

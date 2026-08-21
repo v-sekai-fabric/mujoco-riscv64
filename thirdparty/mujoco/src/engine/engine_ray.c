@@ -1567,4 +1567,3 @@ void mj_multiRay(const mjModel* m, mjData* d, const mjtNum pnt[3], const mjtNum*
 
   mj_freeStack(d);
 }
-

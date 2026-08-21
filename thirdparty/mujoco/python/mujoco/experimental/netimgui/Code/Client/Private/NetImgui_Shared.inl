@@ -6,19 +6,19 @@
 namespace NetImgui { namespace Internal
 {
 
-template <typename TType, typename... Args> 
+template <typename TType, typename... Args>
 TType* netImguiNew(Args... args)
 {
 	return new( ImGui::MemAlloc(sizeof(TType)) ) TType(args...);
 }
 
-template <typename TType> 
+template <typename TType>
 TType* netImguiSizedNew(size_t placementSize)
 {
 	return new( ImGui::MemAlloc(placementSize > sizeof(TType) ? placementSize : sizeof(TType)) ) TType();
 }
 
-template <typename TType> 
+template <typename TType>
 void netImguiDelete(TType* pData)
 {
 	if( pData )
@@ -28,7 +28,7 @@ void netImguiDelete(TType* pData)
 	}
 }
 
-template <typename TType> 
+template <typename TType>
 void netImguiDeleteSafe(TType*& pData)
 {
 	netImguiDelete(pData);
@@ -63,8 +63,8 @@ void ExchangePtr<TType>::Free()
 }
 
 template <typename TType>
-ExchangePtr<TType>::~ExchangePtr()	
-{ 
+ExchangePtr<TType>::~ExchangePtr()
+{
 	Free();
 }
 
@@ -210,7 +210,7 @@ template <typename TType, size_t TCount>
 bool Ringbuffer<TType,TCount>::ReadData(TType* pData)
 //=============================================================================
 {
-	if (mPosCur < mPosLast) 
+	if (mPosCur < mPosLast)
 	{
 		*pData = mBuffer[mPosCur % TCount];
 		mPosCur++;
@@ -255,7 +255,7 @@ int StringFormat(char(&output)[charCount], char const* const format, ...)
 {
 #if defined(__clang__)
 	#pragma clang diagnostic push
-	#pragma clang diagnostic ignored "-Wformat-nonliteral"	
+	#pragma clang diagnostic ignored "-Wformat-nonliteral"
 #endif
 
 	va_list args;
@@ -328,7 +328,7 @@ ClientTextureID ConvertToClientTexID(ImTextureID textureID)
 	textureUnion.TexClientID	= 0;
 	textureUnion.TexID			= textureID;
 	return textureUnion.TexClientID;
-	
+
 }
 
 ImTextureID ConvertFromClientTexID(ClientTextureID clientTexID)

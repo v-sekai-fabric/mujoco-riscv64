@@ -1095,4 +1095,3 @@ TEST_F(ElasticityTest, TrilinearParentBodyRotation) {
 
 }  // namespace
 }  // namespace mujoco
-

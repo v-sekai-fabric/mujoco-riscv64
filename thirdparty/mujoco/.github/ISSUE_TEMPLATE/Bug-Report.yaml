@@ -89,4 +89,3 @@ body:
           required: true
         - label: I searched previous [Issues](https://github.com/google-deepmind/mujoco/issues) and [Discussions](https://github.com/google-deepmind/mujoco/discussions), I am certain this has not been raised before.
           required: true
-

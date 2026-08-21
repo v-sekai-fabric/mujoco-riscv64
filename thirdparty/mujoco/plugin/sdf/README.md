@@ -98,10 +98,3 @@ class MySDF {
   MySDF(const mjModel* m, mjData* d, int instance);
 };
 ```
-
-
-
-
-
-
-
